@@ -44,4 +44,21 @@ This repository is a Vue 3 + Vite starter. When generating or editing UI, follow
 - Use Element Plus for common UI patterns like buttons, cards, and dialogs.
 - Prefer a polished but lightweight visual system over excessive decoration.
 
+## 9. Code review and development workflow
+
+- Keep changes small, focused, and easy to review.
+- Prefer simple implementations over clever ones.
+- Before completing work, verify the result locally and ensure the build still passes.
+- Check that new code follows the existing structure, naming, and UI conventions.
+- When suggesting or applying changes, think about correctness, readability, maintainability, and user experience.
+- For bigger features, break the work into clear steps and review each step before moving on.
+
+## 10. Find skills and change placement
+
+- Before editing, inspect the existing project structure to find the most relevant place for the change.
+- Prefer the current app shell in src/App.vue for shared navigation and layout updates.
+- Put page-specific content in src/pages/ and register routes in src/router/index.js.
+- Use src/index.css for global styling and theme helpers.
+- Keep documentation updates in docs/ and follow the current repository conventions.
+
 When creating new features in this project, aim for a balance of simplicity, usability, and visual clarity.
