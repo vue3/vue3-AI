@@ -59,3 +59,20 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## 部署到 GitHub Pages
+
+这个项目已经内置了 GitHub Actions 工作流，推送到 main 分支后会自动部署到 GitHub Pages。
+
+### 你需要做的两步
+
+1. 在 GitHub 仓库里进入 Settings → Pages
+2. 将 Source 设置为 GitHub Actions
+
+部署成功后，访问地址通常为：
+
+```text
+https://<your-username>.github.io/vue3-AI/
+```
+
+如果你的仓库名不同，访问地址需要对应修改。

@@ -39,6 +39,11 @@
         <el-button plain round @click="togglePortfolioMode" class="!ml-1">
           {{ isPortfolioMode ? "标准模式" : "作品集模式" }}
         </el-button>
+        <div
+          class="hidden rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-600 dark:border-cyan-400/20 dark:bg-cyan-400/10 dark:text-cyan-300 sm:flex"
+        >
+          可部署到 GitHub Pages
+        </div>
         <el-button
           circle
           @click="toggleTheme"
