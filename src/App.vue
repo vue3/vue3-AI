@@ -39,15 +39,23 @@
         <el-button plain round @click="togglePortfolioMode" class="!ml-1">
           {{ isPortfolioMode ? "标准模式" : "作品集模式" }}
         </el-button>
-        <el-button circle @click="toggleTheme" class="!ml-1">
-          <span>{{ isDark ? "☀️" : "🌙" }}</span>
+        <el-button
+          circle
+          @click="toggleTheme"
+          class="!ml-1"
+          :title="isDark ? '切换到浅色模式' : '切换到深色模式'"
+          :aria-label="isDark ? '切换到浅色模式' : '切换到深色模式'"
+        >
+          <span class="text-base">{{ isDark ? "☀️" : "🌙" }}</span>
         </el-button>
         <el-button
           class="lg:hidden"
           circle
           @click="mobileMenuOpen = !mobileMenuOpen"
+          :title="mobileMenuOpen ? '收起菜单' : '展开菜单'"
+          :aria-label="mobileMenuOpen ? '收起菜单' : '展开菜单'"
         >
-          <span>☰</span>
+          <span class="text-base">{{ mobileMenuOpen ? "✕" : "☰" }}</span>
         </el-button>
       </div>
     </header>

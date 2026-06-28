@@ -42,24 +42,30 @@
       </div>
 
       <div
-        class="rounded-[28px] border border-slate-200/70 bg-slate-950 p-6 text-white shadow-inner dark:border-white/10"
+        class="rounded-[28px] border border-slate-200/70 bg-white/80 p-6 text-slate-900 shadow-inner dark:border-white/10 dark:bg-slate-950 dark:text-white"
       >
         <div class="mb-4 flex items-center justify-between">
           <p class="text-sm font-medium">AI 工作流</p>
           <span
-            class="rounded-full bg-emerald-500/20 px-2.5 py-1 text-xs text-emerald-300"
+            class="rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-300"
             >实时运行</span
           >
         </div>
         <div class="space-y-3">
-          <div class="rounded-2xl bg-slate-800/80 p-4 text-sm text-slate-300">
+          <div
+            class="rounded-2xl bg-slate-100/80 p-4 text-sm text-slate-700 dark:bg-slate-800/80 dark:text-slate-300"
+          >
             <p class="mb-2 text-xs uppercase tracking-[0.24em] text-slate-500">
               输入
             </p>
             <p>帮我把产品特性提炼为更适合官网展示的文案。</p>
           </div>
-          <div class="rounded-2xl bg-cyan-500/15 p-4 text-sm text-cyan-100">
-            <p class="mb-2 text-xs uppercase tracking-[0.24em] text-cyan-400">
+          <div
+            class="rounded-2xl bg-cyan-500/10 p-4 text-sm text-cyan-700 dark:bg-cyan-500/15 dark:text-cyan-100"
+          >
+            <p
+              class="mb-2 text-xs uppercase tracking-[0.24em] text-cyan-600 dark:text-cyan-400"
+            >
               输出
             </p>
             <p>已生成一版更清晰、更专业的产品介绍和场景示例。</p>

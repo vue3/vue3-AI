@@ -36,6 +36,39 @@ body {
   box-sizing: border-box;
 }
 
+.dark .el-table,
+.dark .el-table__header,
+.dark .el-table__body,
+.dark .el-table th,
+.dark .el-table td,
+.dark .el-table tr,
+.dark .el-table__empty-text {
+  background-color: transparent !important;
+  color: #e2e8f0 !important;
+}
+
+.dark .el-table th.el-table__cell {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  color: #f8fafc !important;
+}
+
+.dark .el-table td.el-table__cell {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+  border-color: rgba(148, 163, 184, 0.2) !important;
+}
+
+.dark
+  .el-table--striped
+  .el-table__body
+  tr.el-table__row--striped
+  td.el-table__cell {
+  background-color: rgba(30, 41, 59, 0.6) !important;
+}
+
+.dark .el-table__row.current-row > td.el-table__cell {
+  background-color: rgba(34, 211, 238, 0.16) !important;
+}
+
 .fade-slide-enter-active,
 .fade-slide-leave-active {
   transition: all 0.24s ease;
