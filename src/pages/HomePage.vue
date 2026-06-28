@@ -9,35 +9,34 @@
           class="inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-sm text-cyan-600 dark:text-cyan-300"
         >
           <span class="h-2 w-2 rounded-full bg-cyan-500"></span>
-          AI Product Showcase
+          Frontend / AI Product Showcase
         </div>
         <div class="space-y-4">
           <h1
             class="text-4xl font-semibold leading-tight text-slate-900 dark:text-white sm:text-5xl"
           >
-            用更清晰的设计，让 AI 产品真正被看见。
+            我用前端把产品想法，变成一页能被看见、被理解的作品。
           </h1>
           <p
             class="max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300"
           >
-            这是一个面向作品集和个人品牌设计的 SaaS
-            风格演示页，包含清晰的价值主张、现代化交互和可扩展的产品场景。
+            这是一个偏个人作品集与产品展示风格的页面，重点体现清晰的信息结构、现代化体验和适合简历/作品集展示的视觉表达。
           </p>
         </div>
         <div class="flex flex-wrap gap-3">
           <router-link to="/dashboard">
-            <el-button type="primary" size="large">查看产品体验</el-button>
+            <el-button type="primary" size="large">查看案例</el-button>
           </router-link>
           <router-link to="/chat">
-            <el-button size="large" plain>体验聊天场景</el-button>
+            <el-button size="large" plain>查看交互体验</el-button>
           </router-link>
         </div>
         <div
           class="flex flex-wrap gap-6 text-sm text-slate-500 dark:text-slate-400"
         >
-          <span>现代 SaaS 风格</span>
-          <span>清晰信息层级</span>
-          <span>适合作品集展示</span>
+          <span>适合简历与作品集展示</span>
+          <span>强调信息层级与可读性</span>
+          <span>兼顾产品感与细节体验</span>
         </div>
       </div>
 
@@ -120,6 +119,54 @@
             </span>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section
+      class="rounded-[32px] border border-slate-200/70 bg-white/80 p-8 shadow-sm dark:border-white/10 dark:bg-slate-900/60 lg:p-10"
+    >
+      <div
+        class="mb-6 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between"
+      >
+        <div>
+          <p
+            class="text-sm font-medium uppercase tracking-[0.3em] text-cyan-600 dark:text-cyan-300"
+          >
+            Vue 3 + AI + Enterprise Workflow
+          </p>
+          <h2
+            class="mt-2 text-3xl font-semibold text-slate-900 dark:text-white"
+          >
+            用更标准的前端工程化方式，把 Vue 3、AI 与 Skills 真正落地。
+          </h2>
+        </div>
+        <p
+          class="max-w-xl text-sm leading-7 text-slate-600 dark:text-slate-400"
+        >
+          这里展示的是一套更贴近大厂实践的思路：从 Vue 3 的最新实践，到项目接入
+          AI 的标准步骤，再到 Skills 在开发流程里的具体落地。
+        </p>
+      </div>
+
+      <div class="grid gap-4 xl:grid-cols-2">
+        <article
+          v-for="skill in skillCards"
+          :key="skill.title"
+          class="rounded-2xl border border-slate-200/70 bg-slate-50 p-6 shadow-sm transition hover:-translate-y-1 dark:border-white/10 dark:bg-slate-950/70"
+        >
+          <div class="flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-cyan-500"></span>
+            <h3 class="text-lg font-semibold text-slate-900 dark:text-white">
+              {{ skill.title }}
+            </h3>
+          </div>
+          <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
+            {{ skill.description }}
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-400">
+            <li v-for="point in skill.points" :key="point">• {{ point }}</li>
+          </ul>
+        </article>
       </div>
     </section>
 
@@ -223,6 +270,55 @@ const props = defineProps({
     default: false,
   },
 });
+
+const skillCards = [
+  {
+    title: "Vue 3 最新实践",
+    description:
+      "以 Composition API、script setup、Vue Router、响应式状态与现代构建体系为核心，把前端项目做成更稳定、更易维护的工程。",
+    points: [
+      "Composition API + script setup 提升可读性",
+      "Vue Router 4 管理多场景页面与导航",
+      "Vite 提供快速开发与高效构建体验",
+      "TypeScript / Pinia / Suspense 等方向增强工程化能力",
+    ],
+  },
+  {
+    title: "Vue 3 项目接入 AI 的步骤",
+    description:
+      "把 AI 真正接入开发流程，不是只生成代码，而是从需求、规范、实现、验证、发布形成闭环。",
+    points: [
+      "先定义业务目标与页面结构",
+      "建立设计规则、代码规范和 review 规则",
+      "让 AI 生成页面骨架与交互说明",
+      "通过构建和审查把代码落地到项目中",
+      "最终用 CI/CD 和发布流程把体验输出出去",
+    ],
+  },
+  {
+    title: "Skills 的标准使用方式",
+    description:
+      "把技能规则固化成项目级指引，让 AI 在不同场景下都知道该怎么做、改哪里、如何验证。",
+    points: [
+      "用 instructions 明确项目约束与修改范围",
+      "用 applyTo 精准限制规则触发范围",
+      "把前端设计、代码审查和流程规范固化下来",
+      "让 AI 更像团队里的标准化协作者，而不是临时助手",
+    ],
+  },
+  {
+    title: "大厂前端开发流程",
+    description:
+      "从需求拆解到上线发布，保证项目不仅能跑，而且符合团队协作、代码评审和可持续交付的标准。",
+    points: [
+      "需求评审与任务拆解",
+      "开发前统一设计规范与工程约定",
+      "Code Review 与测试验证",
+      "CI/CD 与 GitHub Pages / 线上发布",
+      "持续优化与性能与可维护性追踪",
+    ],
+  },
+];
 
 const projects = [
   {
